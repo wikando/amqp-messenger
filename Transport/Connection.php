@@ -583,7 +583,7 @@ class Connection
         retry:
         try {
             $callable();
-        } catch (\AMQPConnectionException $e) {
+        } catch (\AMQPException $e) {
             if (++$retries <= $maxRetries) {
                 $this->clear();
 
